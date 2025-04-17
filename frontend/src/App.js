@@ -18,19 +18,19 @@ const App = () => {
   }, []);
 
   const fetchTransactions = async () => {
-    const response = await fetch('http://localhost:4000/api/transactions');
+    const response = await fetch('https://personal-finance-app-9vr3.onrender.com/api/transactions');
     const data = await response.json();
     setTransactions(data);
   };
 
   const fetchSummary = async () => {
-    const response = await fetch('http://localhost:4000/api/transactions/summary');
+    const response = await fetch('https://personal-finance-app-9vr3.onrender.com/api/transactions/summary');
     const data = await response.json();
     setSummary(data);
   };
 
   const addTransaction = async (transaction) => {
-    const response = await fetch('http://localhost:4000/api/transactions', {
+    const response = await fetch('https://personal-finance-app-9vr3.onrender.com/api/transactions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(transaction),
@@ -42,7 +42,7 @@ const App = () => {
   };
 
   const deleteTransaction = async (id) => {
-    const response = await fetch(`http://localhost:4000/api/transactions/${id}`, {
+    const response = await fetch(`https://personal-finance-app-9vr3.onrender.com/api/transactions/${id}`, {
       method: 'DELETE',
     });
     if (response.ok) {
@@ -52,7 +52,7 @@ const App = () => {
   };
 
   const editTransaction = async (id, updatedTransaction) => {
-    const response = await fetch(`http://localhost:4000/api/transactions/${id}`, {
+    const response = await fetch(`https://personal-finance-app-9vr3.onrender.com/api/transactions/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(updatedTransaction),
