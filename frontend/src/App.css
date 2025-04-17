@@ -1,0 +1,416 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif; /* Modern and professional font */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb); /* Subtle gradient background */
+  color: #333;
+  overflow-y: auto; /* Enable vertical scrolling for the page */
+}
+
+html {
+  height: 100%; /* Ensure the HTML element takes full height */
+}
+
+.app {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh; /* Ensure the app container takes at least the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Transaction Form */
+.transaction-form {
+  background: linear-gradient(135deg, #ffffff, #f3f4f6); /* Subtle gradient background */
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* 3D shadow effect */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transaction-form:hover {
+  transform: translateY(-5px); /* Slight hover lift */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.transaction-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2563eb; /* Professional blue */
+  text-align: center;
+  background: linear-gradient(135deg, #2563eb, #3b82f6); /* Gradient background */
+  color: #ffffff; /* White text color */
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.transaction-form input,
+.transaction-form select,
+.transaction-form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+  transition: all 0.3s ease;
+}
+
+.transaction-form input:focus,
+.transaction-form select:focus,
+.transaction-form button:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.5); /* Focus effect */
+}
+
+.transaction-form button {
+  background: linear-gradient(135deg, #2563eb, #3b82f6); /* Gradient button */
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.transaction-form button:hover {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+/* Transaction List */
+.transaction-list {
+  background: linear-gradient(135deg, #ffffff, #f3f4f6); /* Subtle gradient background */
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* 3D shadow effect */
+  margin-bottom: 20px;
+}
+
+.transaction-list h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2563eb;
+  text-align: center;
+  background: linear-gradient(135deg, #2563eb, #3b82f6); /* Gradient background */
+  color: #ffffff; /* White text color */
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.transaction-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transaction-list th,
+.transaction-list td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.transaction-list th {
+  background-color: #f4f4f4;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.transaction-list tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.transaction-list button {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-right: 10px; /* Add spacing between buttons */
+}
+
+.transaction-list button:last-child {
+  margin-right: 0; /* Remove margin for the last button in a row */
+}
+
+.transaction-list input,
+.transaction-list select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Dashboard */
+.dashboard {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+/* Dashboard Heading */
+.dashboard h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff; /* White text color */
+  text-align: center;
+  background: linear-gradient(135deg, #2563eb, #3b82f6); /* Gradient background */
+  padding: 15px 20px; /* Add padding for spacing */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Dashboard Section */
+.dashboard-section {
+  margin-bottom: 20px;
+}
+
+.dashboard-section h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2563eb;
+  text-align: left;
+}
+
+/* Dashboard Table */
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.dashboard-table th {
+  background-color: #f4f4f4;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.dashboard-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.dashboard-table tr:hover {
+  background-color: #e5e7eb; /* Highlight row on hover */
+}
+
+/* Dashboard Grid Layout */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+}
+
+/* Card Styles */
+.card {
+  background: linear-gradient(135deg, #2563eb, #3b82f6); /* Gradient background */
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-height: 300px; /* Set a maximum height for the card */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight hover lift */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Card Heading */
+.card h3 {
+  font-size: 1.6rem; /* Larger font size for headings */
+  font-weight: 600; /* Bold font for emphasis */
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase; /* Make headings uppercase for a professional look */
+}
+
+/* Card Value Styling (e.g., Total Expenses) */
+.card-value {
+  font-size: 2rem; /* Larger font size for key values */
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  color: #ffffff; /* White text for contrast */
+}
+
+/* List Styling (e.g., Category Breakdown, Recent Transactions) */
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  font-size: 1rem; /* Standard font size for list items */
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card ul li span {
+  font-weight: 500; /* Slightly bold for better readability */
+}
+
+.card ul li strong {
+  font-weight: bold;
+  color: #ffffff; /* White color for emphasis */
+}
+
+/* Amount Styling */
+.currency {
+  font-size: 1rem; /* Font size for "RS" */
+  font-weight: 500; /* Bold for emphasis */
+  color: black; /* black color for a premium look */
+  margin-right: 5px; /* Space between "RS" and the amount */
+  vertical-align: middle; /* Align with the amount text */
+  font-style: italic;
+}
+.amount {
+  font-size: 1rem;
+  font-style: oblique
+}
+
+
+/* Scrollbar Styling */
+.card::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.card::-webkit-scrollbar-thumb {
+  background: #3b82f6; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the scrollbar thumb */
+}
+
+.card::-webkit-scrollbar-thumb:hover {
+  background: #2563eb; /* Darker color on hover */
+}
+
+.card::-webkit-scrollbar-track {
+  background: #e5e7eb; /* Light background for the scrollbar track */
+}
+
+/* Error Message */
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .summary-cards {
+    flex-direction: column; /* Stacks cards vertically on smaller screens */
+  }
+
+  .transaction-form input,
+  .transaction-form select,
+  .transaction-form button {
+    font-size: 0.9rem; /* Adjusts font size for smaller screens */
+  }
+
+  .transaction-list th,
+  .transaction-list td {
+    font-size: 0.9rem; /* Reduces table font size */
+  }
+
+  .card h3 {
+    font-size: 1.4rem; /* Slightly smaller heading size */
+  }
+
+  .card-value {
+    font-size: 1.8rem; /* Slightly smaller value size */
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+  }
+
+  .card ul li {
+    font-size: 0.9rem; /* Smaller font size for list items */
+  }
+
+  .dashboard h2 {
+    font-size: 1.8rem;
+  }
+
+  .dashboard-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .dashboard-table th,
+  .dashboard-table td {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .transaction-form input,
+  .transaction-form select,
+  .transaction-form button {
+    font-size: 0.8rem; /* Further reduce font size */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .transaction-list th,
+  .transaction-list td {
+    font-size: 0.8rem; /* Reduce table font size */
+    padding: 8px; /* Adjust padding */
+  }
+
+  .card {
+    padding: 15px; /* Reduce card padding */
+  }
+
+  .card h3 {
+    font-size: 1.2rem; /* Smaller heading size */
+  }
+
+  .card-value {
+    font-size: 1.6rem; /* Smaller value size */
+  }
+
+  .card ul li {
+    font-size: 0.8rem; /* Smaller font size for list items */
+  }
+
+  .dashboard h2 {
+    font-size: 1.6rem;
+  }
+
+  .dashboard-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .dashboard-table th,
+  .dashboard-table td {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,39 @@
+### Get All Transactions
+GET http://localhost:4000/api/transactions
+Content-Type: application/json
+
+###
+
+### Add a New Transaction
+POST http://localhost:4000/api/transactions
+Content-Type: application/json
+
+{
+  "amount": 350,
+  "date": "2025-04-16",
+  "description": "Shirt",
+  "category": "Clothing"
+}
+
+###
+
+### Edit a Transaction
+PUT http://localhost:4000/api/transactions/67ff8e15a8bb783f6a05f7a5
+Content-Type: application/json
+
+{
+  "amount": 150,
+  "date": "2025-04-17",
+  "description": "shirt",
+  "category": "Clothing"
+}
+
+###
+
+### Delete a Transaction
+DELETE http://localhost:4000/api/transactions/{{transactionId}}
+Content-Type: application/json
+
+### Get Dashboard Summary
+GET http://localhost:4000/api/transactions/summary
+Content-Type: application/json
